@@ -1,0 +1,29 @@
+public static void main(String[] args) {
+		int cargo, salario, salariogerente = 0, salarioengenheiro = 0, salariotecnico = 0 ;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("digite o seu cargo");
+		System.out.println("101-Gerente");
+		System.out.println("102-Engenheiro");
+		System.out.println("103-Tecnico");
+		cargo=sc.nextInt();
+		System.out.println("digite o seu salario.");
+		salario=sc.nextInt();
+		sc.close();
+		if (cargo==101) {
+		    salariogerente=((10*salario)/100);
+	}   if (cargo==102) {
+			salarioengenheiro=((20*salario)/100);
+	}   if (cargo==103) {
+			salariotecnico=((30*salario)/100);
+    }
+	    switch(cargo) {
+	    	case 101: System.out.println("salario antigo:"+salario+"; Novo salario:"+salariogerente);
+	    		break;
+	    	case 102: System.out.println("salario antigo:"+salario+"; Novo salario:"+salarioengenheiro);
+	    		break;
+	    	case 103: System.out.println("salario antigo:"+salario+"; Novo salario:"+salariotecnico);
+	    }
+		
+		
+
+	}
