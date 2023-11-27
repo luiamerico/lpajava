@@ -1,1 +1,24 @@
+	public static void main(String[] args) {
+		int[] vet=new int[5];
+		
+		preenche(vet);
+		mostra(vet);
+
+	}
+
+	public static void preenche(int[] v) {
+		Scanner sc=new Scanner(System.in);
+		
+		for(int i=0; i<v.length; i++) {
+			v[i]=sc.nextInt();
+		}
+	}
+	
+	public static void mostra(int[] v) {
+		for(int i=v.length-1; i>=0; i--) {
+			System.out.print(v[i]+" ");
+		}
+		System.out.println();
+	}
+}
 
