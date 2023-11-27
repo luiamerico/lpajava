@@ -1,0 +1,44 @@
+public static void main(String[] args) {
+		int[] vet=new int[10];
+		
+		preenche(vet);
+		mostra(vet);
+		System.out.println(media(vet));
+		System.out.println(qtdAcimaMedia(vet));
+		
+	}
+
+	public static void preenche(int[] v) {
+		Random rand = new Random();
+		
+		for(int i=0; i<v.length; i++) {
+			v[i]=rand.nextInt(10);
+		}
+	}
+	
+	public static double media(int[] v) {
+		double s=0;
+		
+		for(int i=0; i<v.length; i++) {
+			s += v[i];
+		}
+		return s/v.length;
+	}
+	
+	public static int qtdAcimaMedia(int[] v) {
+		double md=media(v);
+		int cont=0;
+		for(int i=0; i<v.length; i++) {
+			if(v[i]>md) {
+				cont++;
+			}
+		}
+		return cont;
+	}
+	
+	public static void mostra(int[] v) {
+		for(int i=0; i<v.length; i++) {
+			System.out.print(v[i]+" ");
+		}
+		System.out.println();
+	}
