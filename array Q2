@@ -1,0 +1,36 @@
+public static void main(String[] args) {
+		int[] vet1= new int[5];
+		int[] vet2= new int[5];
+		int[] s;
+		preenche(vet1);
+		mostra(vet1);
+		preenche(vet2);
+		mostra(vet2);
+		s=soma(vet1, vet2);
+		mostra(s);
+		
+	}
+
+	public static void preenche(int[] v) {
+		Random rand = new Random();
+		
+		for(int i=0; i<v.length; i++) {
+			v[i]=rand.nextInt(10);
+		}
+	}
+	
+	public static void mostra(int[] v) {
+		for(int i=0; i<v.length; i++) {
+			System.out.print(v[i]+" ");
+		}
+		System.out.println();
+	}
+	
+	public static int[] soma(int[] v1, int[] v2) {
+		int[] resp = new int[v1.length];
+		
+		for(int i=0; i<resp.length; i++) {
+			resp[i]= v1[i]+v2[i];
+		}
+		return resp;
+	}
